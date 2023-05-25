@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 struct Students
 {
@@ -7,7 +7,7 @@ struct Students
 	char stu_name[100];
 } s[100];
 
-int main()
+main()
 {
 	int i;
 	for (i=0;i<5;i++)
@@ -24,12 +24,13 @@ int main()
 		scanf("%f", &s[i].stu_physics_marks);
 	}
 	printf("\n_______________________________________________\n");
+	
 	printf("\n");
 
 	for (i=0;i<5;i++)
 	{
 		float percentage = (s[i].stu_maths_marks + s[i].stu_chemistry_marks + s[i].stu_physics_marks)/300.0* 100;
 		printf("Student Roll no. :%d\n", s[i].stu_roll_no);
-		printf("Student percentage=%.2f%\n", percentage);
+		printf("Student percentage=%f.2\n", percentage);
 	}
 }
